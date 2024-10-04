@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { getPokemonList } from '../services/pokeApiService';
-import { Link } from 'react-router-dom';
+import Card from '../components/Card';
+import '../css/Pokedex.css';
 
 const Pokedex = () => {
   const [pokemonList, setPokemonList] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    {/* Pokemon List*/}
     const fetchPokemon = async () => {
       try {
         const data = await getPokemonList();
@@ -25,16 +26,34 @@ const Pokedex = () => {
     return <p>Loading...</p>;
   }
 
+  // Search
+  const filteredPokemonList = pokemonList.filter((pokemon) => {
+    return (
+      pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()) || // Search by name
+      pokemon.id.toString().includes(searchTerm) // Search by ID
+    );
+  });
+
   return (
-    <div>
+    <div className="pokedex-container">
       <h2>Pokédex</h2>
-      <ul>
-        {pokemonList.map((pokemon) => (
-          <li key={pokemon.name}>
-            <Link to={`/pokemon/${pokemon.name}`}>{pokemon.name}</Link>
-          </li>
+
+      {/* SEARCH */}
+      <input
+        type="text"
+        placeholder="Pesquise por nome ou número"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className="search-input"
+      />
+
+      {/* CARDS */}
+      <div className="pokemon-grid">
+        {filteredPokemonList.map((pokemon) => (
+          <Card key={pokemon.id} pokemon={pokemon} />
         ))}
-      </ul>
+      </div>
+      
     </div>
   );
 };
