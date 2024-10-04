@@ -3,7 +3,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #2a75bb;
+  background-color: #db0b0b;
+  height: 45px;
 }
 
 .logo h1 {
@@ -12,6 +13,16 @@
   cursor: pointer;
   margin: 0;
 }
+
+.nav-logo {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-logo h1 {
+  margin: 0; 
+}
+
 
 .nav {
   display: flex;
@@ -37,7 +48,7 @@
 }
 
 .nav-link.active {
-  color: #ffcb05; /* Cor ativa ao clicar */
+  color: #ffcb05;
 }
 
 .nav-link:hover {
