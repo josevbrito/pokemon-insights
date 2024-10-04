@@ -1,0 +1,34 @@
+.types-page {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.types-page h2 {
+    font-size: 32px;
+    color: #ffcb05;
+    margin-bottom: 20px;
+}
+
+.types-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.type-item {
+    background-color: #2a75bb;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease;
+}
+
+.type-item:hover {
+    background-color: #ffcb05;
+    cursor: pointer;
+}
