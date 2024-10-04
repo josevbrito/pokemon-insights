@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Pokedex from './pages/Pokedex';
 import Types from './pages/Types';
-import './App.css';
+import PokemonDetails from './pages/PokemonDetails';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/pokedex" element={<Pokedex />} />
             <Route path="/types" element={<Types />} />
+            <Route path="/pokemon/:pokemonName" element={<PokemonDetails />} />
           </Routes>
         </main>
         <Footer />
