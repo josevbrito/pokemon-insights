@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Pokedex from './pages/Pokedex';
 import Types from './pages/Types';
 import PokemonDetails from './pages/PokemonDetails';
+import './App.css';
 
 function App() {
   return (
