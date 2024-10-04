@@ -41,7 +41,7 @@ const Pokedex = () => {
       {/* SEARCH */}
       <input
         type="text"
-        placeholder="Pesquise por nome ou número"
+        placeholder="Search by ID or Name"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="search-input"
@@ -53,7 +53,7 @@ const Pokedex = () => {
           <Card key={pokemon.id} pokemon={pokemon} />
         ))}
       </div>
-      
+
     </div>
   );
 };
