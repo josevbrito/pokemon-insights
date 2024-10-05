@@ -1,7 +1,7 @@
 .pokemon-card {
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 15px;
     padding: 10px;
     text-align: center;
     transition: transform 0.2s;

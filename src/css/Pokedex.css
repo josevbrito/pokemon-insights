@@ -1,19 +1,113 @@
 .pokedex-container {
-    padding: 20px;
+    padding: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .search-input {
     width: 40%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 50px;
+    border: 3px solid #ccc;
+    border-radius: 25px;
     font-size: 16px;
+    height: 30px;
 }
   
 .pokemon-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 15px;
+}
+
+@media (max-width: 1200px) {
+    
+    .pokedex-container {
+        padding: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .pokemon-grid {
+        grid-template-columns: repeat(6, 1fr); /* 6 cards per row */
+    }
+
+    .search-input {
+        width: 50%;
+        padding: 15px;
+        margin-bottom: 50px;
+        border: 3px solid #ccc;
+        border-radius: 25px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1050px) {
+    
+    .pokedex-container {
+        padding: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .pokemon-grid {
+        grid-template-columns: repeat(4, 1fr); /* 3 cards per row */
+    }
+
+    .search-input {
+        width: 50%;
+        padding: 15px;
+        margin-bottom: 50px;
+        border: 3px solid #ccc;
+        border-radius: 25px;
+        font-size: 16px;
+    }
+}
+  
+@media (max-width: 768px) {
+    .pokedex-container {
+        padding: 15px;
+        max-width: 768px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .pokemon-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    }
+
+    .search-input {
+        width: 60%;
+        padding: 10px;
+        margin-bottom: 50px;
+        border: 3px solid #ccc;
+        border-radius: 25px;
+        font-size: 16px;
+    }
+}
+  
+@media (max-width: 480px) {
+    .pokedex-container {
+        padding: 10px;
+        max-width: 480px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .pokemon-grid {
+        grid-template-columns: repeat(2, 1fr) /* 2 card per row on small devices */
+    }
+
+    .search-input {
+        width: 70%;
+        padding: 15px;
+        margin-bottom: 50px;
+        border: 3px solid #ccc;
+        border-radius: 25px;
+        font-size: 16px;
+    }
 }
   
