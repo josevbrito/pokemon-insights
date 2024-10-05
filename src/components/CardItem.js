@@ -7,7 +7,7 @@ const CardItem = ({ item }) => {
     <div className="card">
       <Link to={`/item/${item.name}`}>
         <div className="image">
-        <img src={`https://img.pokemondb.net/sprites/items/${item.name}.png`} alt={item.name} />
+          <img src={`https://img.pokemondb.net/sprites/items/${item.name}.png`} alt={item.name} />
         </div>
         <div className="info">
           <span className="name">{item.name}</span>
