@@ -2,7 +2,6 @@ import axios from 'axios';
 
 const BASE_URL = 'https://pokeapi.co/api/v2';
 
-
 // berries list (cards)
 export const getBerriesList = async () => {
     try {
@@ -11,23 +10,24 @@ export const getBerriesList = async () => {
 
         const berriesDetailsPromises = berriesData.map(async (berry) => {
             const detailsResponse = await axios.get(berry.url);
+            
+            const itemResponse = await axios.get(detailsResponse.data.item.url);
 
             return {
                 id: detailsResponse.data.id,
                 name: detailsResponse.data.name,
-                image: detailsResponse.data.sprites.front_default,
+                image: itemResponse.data.sprites.default,
             };
         });
 
         return Promise.all(berriesDetailsPromises);
-
     } catch (e) {
-        console.error('Error when searching list of berriess', e);
+        console.error('Error when searching list of berries', e);
         throw e;
     }
-    
+};
 
-}
+
 
 // berry details for the page (berry details)
 export const getBerryDetails = async (berryName) => {

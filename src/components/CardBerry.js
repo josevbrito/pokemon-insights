@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../css/Card.css';
+import '../css/CardBerry.css';
 
-const Card = ({ berry }) => {
+const CardBerry = ({ berry }) => {
   return (
-    <div className="card">
+    <div className="card-berry">
       <Link to={`/berry/${berry.name}`}>
         <div className="image">
-          <img src={`https://img.berrydb.net/artwork/large/${berry.name}.jpg`} alt={berry.name} />
+          <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/${berry.name}-berry.png`} alt={berry.name} />
         </div>
         <div className="info">
           <span className="number">#{berry.id}</span>
@@ -18,4 +18,4 @@ const Card = ({ berry }) => {
   );
 };
 
-export default Card;
+export default CardBerry;

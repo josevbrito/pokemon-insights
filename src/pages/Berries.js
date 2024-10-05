@@ -1,27 +1,27 @@
-import React, { useEffect, useState} from "react";
-import {getBerriesList} from '../services/berryApiService';
-import Card from "../components/CardBerry";
+import React, { useEffect, useState } from "react";
+import { getBerriesList } from '../services/berryApiService';
+import CardBerry from "../components/CardBerry";
 import '../css/Berries.css';
 
 const Berries = () => {
-    const [berriesList, setberriesList] = useState([]);
+    const [berriesList, setBerriesList] = useState([]);
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         const fetchBerry = async () => {
-          try {
-            const data = await getBerriesList();
-            setberriesList(data);
-            setLoading(false);
-          } catch (e) {
-            console.error('Error loading berries list.', e);
-          }
+            try {
+                const data = await getBerriesList();
+                setBerriesList(data);
+                setLoading(false);
+            } catch (e) {
+                console.error('Error loading berries list.', e);
+            }
         };
-    
+
         fetchBerry();
     }, []);
-    
+
     if (loading) {
         return <p>Loading...</p>;
     }
@@ -29,8 +29,8 @@ const Berries = () => {
     // Search
     const filteredBerryList = berriesList.filter((berry) => {
         return (
-        berry.name.toLowerCase().includes(searchTerm.toLowerCase()) || // Search by name
-        berry.id.toString().includes(searchTerm) // Search by ID
+            berry.name.toLowerCase().includes(searchTerm.toLowerCase()) || // Search by name
+            berry.id.toString().includes(searchTerm) // Search by ID
         );
     });
 
@@ -50,12 +50,11 @@ const Berries = () => {
             {/* CARDS */}
             <div className="berries-grid">
                 {filteredBerryList.map((berry) => (
-                <Card key={berry.id} berry={berry} />
+                    <CardBerry key={berry.id} berry={berry} />
                 ))}
             </div>
-    
         </div>
-      );
+    );
 };
 
 export default Berries;
