@@ -1,0 +1,26 @@
+.card {
+    border: 2px solid #ccc;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.info {
+    margin-top: 10px;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 16px;
+}
