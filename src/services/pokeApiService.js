@@ -20,9 +20,9 @@ export const getPokemonList = async () => {
 
     return Promise.all(pokemonDetailsPromises);
 
-  } catch (error) {
-    console.error('Error when searching list of Pokémon', error);
-    throw error;
+  } catch (e) {
+    console.error('Error when searching list of Pokémon', e);
+    throw e;
   }
 };
 
@@ -33,8 +33,8 @@ export const getPokemonDetails = async (pokemonName) => {
     
     return response.data;
 
-  } catch (error) {
-    console.error(`Error when searching for details of Pokémon ${pokemonName}`, error);
-    throw error;
+  } catch (e) {
+    console.error(`Error when searching for details of Pokémon ${pokemonName}`, e);
+    throw e;
   }
 };

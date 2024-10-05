@@ -1,4 +1,4 @@
-.pokemon-card {
+.card {
     border: 2px solid #ccc;
     background-color: #fff;
     border-radius: 15px;
@@ -7,17 +7,17 @@
     transition: transform 0.2s;
 }
 
-.pokemon-card:hover {
+.card:hover {
     transform: scale(1.05);
 }
 
-.pokemon-image {
+.image {
     width: 100%;
     padding-bottom: 100%;
     position: relative;
 }
 
-.pokemon-image img {
+.image img {
     position: absolute;
     top: 0;
     left: 0;
@@ -27,27 +27,27 @@
 }
 
 
-.pokemon-info {
+.info {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
 }
 
-.pokemon-card a {
+.card a {
     text-decoration: none;
     color: inherit;
 }
 
-.pokemon-card .pokemon-number,
-.pokemon-card .pokemon-name {
+.card .number,
+.card .name {
     margin: 0;
 }
   
 
-.pokemon-number {
+.number {
     font-weight: bold; 
 }
 
-.pokemon-name {
+.name {
     font-weight: normal; 
 }
