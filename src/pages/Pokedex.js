@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getPokemonList } from '../services/pokeApiService';
 import Card from '../components/CardPokemon';
+import Spinner from '../components/Spinner';
 import '../css/Pokedex.css';
 
 const Pokedex = () => {
@@ -23,7 +24,7 @@ const Pokedex = () => {
   }, []);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <Spinner />;
   }
 
   // Search

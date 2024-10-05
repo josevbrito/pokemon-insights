@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getBerriesList } from '../services/berryApiService';
 import CardBerry from "../components/CardBerry";
+import Spinner from '../components/Spinner';
 import '../css/Berries.css';
 
 const Berries = () => {
@@ -23,7 +24,7 @@ const Berries = () => {
     }, []);
 
     if (loading) {
-        return <p>Loading...</p>;
+        return <Spinner />;
     }
 
     // Search
