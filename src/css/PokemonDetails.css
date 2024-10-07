@@ -1,0 +1,127 @@
+/* General layout */
+.pokemon-details-container {
+    max-width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header with name and image */
+.pokemon-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.pokemon-name {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #333;
+}
+
+.pokemon-image {
+    width: 200px;
+    height: 200px;
+}
+
+/* Basic information section */
+.pokemon-basic-info {
+    font-size: 18px;
+    text-align: right;
+}
+
+.pokemon-basic-info p {
+    margin: 5px 0;
+}
+
+/* Type and abilities */
+.pokemon-details-section {
+    margin-top: 20px;
+}
+
+.pokemon-types {
+    display: flex;
+    gap: 10px;
+}
+
+.type-badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.type-grass {
+    background-color: #78c850;
+}
+
+.type-fire {
+    background-color: #f08030;
+}
+
+
+/* Abilities */
+.ability {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* Stats */
+.pokemon-stats-section {
+    margin-top: 20px;
+}
+
+.pokemon-stats {
+    list-style: none;
+    padding: 0;
+}
+
+.pokemon-stats li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.stat-bar {
+    background-color: #eee;
+    border-radius: 10px;
+    height: 12px;
+    margin-top: 5px;
+}
+
+.stat-bar-fill {
+    background-color: #4caf50;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Sprites */
+.pokemon-sprites-section {
+    margin-top: 30px;
+}
+
+.pokemon-sprites img {
+    margin-right: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+.pokemon-sprites img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Loading */
+.loading {
+    text-align: center;
+    font-size: 20px;
+    color: #555;
+}
