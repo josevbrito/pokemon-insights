@@ -2,16 +2,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 15px 30px;
   background-color: #db0b0b;
-  height: 45px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo h1 {
-  font-size: 24px;
+  font-size: 28px;
   color: #ffcb05;
   cursor: pointer;
   margin: 0;
+  font-family: 'Pokemon', sans-serif;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease;
+}
+
+.logo h1:hover {
+  transform: scale(1.05); 
 }
 
 .nav-logo {
@@ -19,39 +29,45 @@
   color: inherit;
 }
 
-.nav-logo h1 {
-  margin: 0; 
-}
-
-
 .nav {
   display: flex;
+  align-items: center;
 }
 
 .nav-list {
   display: flex;
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin: 0;
+  gap: 30px;
 }
 
 .nav-item {
-  margin-left: 20px;
+  margin: 0;
 }
 
 .nav-link {
   text-decoration: none;
-  color: #333;
+  color: #fff; 
   font-weight: bold;
   font-size: 18px;
-  transition: color 0.3s ease;
-}
-
-.nav-link.active {
-  color: #ffcb05;
+  padding: 8px 15px; 
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #ffcb05;
+  background-color: #ffcd0570; 
+  color: #db0b0b; 
 }
-  
+
+.nav-link.active {
+  background-color: #ffcb05;
+  color: #db0b0b; 
+  border-radius: 5px;
+}
+
+.nav-link.active:hover {
+  background-color: #ffcb05; 
+  color: #db0b0b; 
+}
