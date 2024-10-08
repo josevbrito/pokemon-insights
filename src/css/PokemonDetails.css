@@ -1,6 +1,6 @@
 /* General layout */
 .pokemon-details-container {
-    max-width: 50%;
+    max-width: 40%;
     margin: 50px auto;
     padding: 20px;
     background-color: #f7f7f7;
@@ -25,8 +25,8 @@
 }
 
 .pokemon-image {
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
 }
 
 /* Basic information section */
@@ -46,6 +46,8 @@
 
 .pokemon-types {
     display: flex;
+    justify-content: center; 
+    align-items: center;
     gap: 10px;
 }
 
@@ -54,14 +56,6 @@
     border-radius: 20px;
     color: #fff;
     font-weight: bold;
-}
-
-.type-grass {
-    background-color: #78c850;
-}
-
-.type-fire {
-    background-color: #f08030;
 }
 
 

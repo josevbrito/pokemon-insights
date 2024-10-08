@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getPokemonDetails } from '../services/pokeApiService';
 import '../css/PokemonDetails.css';
+import '../css/Types.css';
 
 const PokemonDetails = () => {
   const { pokemonName } = useParams();
