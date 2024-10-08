@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getPokemonDetails } from '../services/pokeApiService';
-import '../css/PokemonDetails.css';
-import '../css/Types.css';
-import Spinner from '../components/Spinner';
+import { getPokemonDetails } from '../../services/pokeApiService';
+import '../../css/pokedex/PokemonDetails.css';
+import '../../css/pokedex/Types.css';
+import Spinner from '../../components/Spinner';
 
 const PokemonDetails = () => {
   const { pokemonName } = useParams();

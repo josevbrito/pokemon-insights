@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getItemDetails } from '../services/itemApiService';
-import '../css/ItemsDetails.css';
-import Spinner from '../components/Spinner';
+import { getItemDetails } from '../../services/itemApiService';
+import '../../css/item/ItemsDetails.css';
+import Spinner from '../../components/Spinner';
 
 const ItemsDetails = () => {
   const { itemName } = useParams();

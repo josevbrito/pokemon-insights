@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getItemDetails } from '../services/itemApiService'; 
-import '../css/CardItem.css';
+import '../css/item/CardItem.css';
 
 const CardItem = ({ item }) => {
   const [itemDetails, setItemDetails] = useState(null);

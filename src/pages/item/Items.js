@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { getItemsList, getItemTypes, getItemsByType } from '../services/itemApiService';
-import CardItem from '../components/CardItem';
-import Spinner from '../components/Spinner';
-import '../css/Items.css';
+import { getItemsList, getItemTypes, getItemsByType } from '../../services/itemApiService';
+import CardItem from '../../components/CardItem';
+import Spinner from '../../components/Spinner';
+import '../../css/item/Items.css';
 
 const Items = () => {
   const [itemList, setItemList] = useState([]);

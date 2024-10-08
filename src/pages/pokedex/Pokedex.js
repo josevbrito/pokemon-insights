@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { getPokemonList } from '../services/pokeApiService';
-import Card from '../components/CardPokemon';
-import Spinner from '../components/Spinner';
-import '../css/Pokedex.css';
+import { getPokemonList } from '../../services/pokeApiService';
+import Card from '../../components/CardPokemon';
+import Spinner from '../../components/Spinner';
+import '../../css/pokedex/Pokedex.css';
 
 const Pokedex = () => {
   const [pokemonList, setPokemonList] = useState([]);

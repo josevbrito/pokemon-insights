@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import Pokedex from './pages/Pokedex';
-import Items from './pages/Items';
-import PokemonDetails from './pages/PokemonDetails';
-import ItemsDetails from './pages/ItemsDetails';
+import Home from './pages/home/Home';
+import Pokedex from './pages/pokedex/Pokedex';
+import Items from './pages/item/Items';
+import PokemonDetails from './pages/pokedex/PokemonDetails';
+import ItemsDetails from './pages/item/ItemsDetails';
 import './App.css';
 
 function App() {
