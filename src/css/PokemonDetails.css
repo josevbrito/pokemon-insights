@@ -113,9 +113,3 @@
     transition: transform 0.3s ease;
 }
 
-/* Loading */
-.loading {
-    text-align: center;
-    font-size: 20px;
-    color: #555;
-}

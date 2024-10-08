@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getPokemonDetails } from '../services/pokeApiService';
 import '../css/PokemonDetails.css';
 import '../css/Types.css';
+import Spinner from '../components/Spinner';
 
 const PokemonDetails = () => {
   const { pokemonName } = useParams();
@@ -24,7 +25,7 @@ const PokemonDetails = () => {
   }, [pokemonName]);
 
   if (loading) {
-    return <p className="loading">Loading Pokémon Details...</p>;
+    return <Spinner />;
   }
 
   return (
