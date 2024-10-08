@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/home/Home';
 import Pokedex from './pages/pokedex/Pokedex';
 import Items from './pages/item/Items';
+import NotFound from './pages/others/NotFound';
 import PokemonDetails from './pages/pokedex/PokemonDetails';
 import ItemsDetails from './pages/item/ItemsDetails';
 import './App.css';
@@ -21,6 +22,7 @@ function App() {
             <Route path="/items" element={<Items />} />
             <Route path="/item/:itemName" element={<ItemsDetails />} />
             <Route path="/pokemon/:pokemonName" element={<PokemonDetails />} />
+            <Route path="*" element={<NotFound />} /> {/* Catch-all route for 404 */}
           </Routes>
         </main>
         <Footer />
