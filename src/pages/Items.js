@@ -13,16 +13,14 @@ const Items = () => {
 
   useEffect(() => {
     const fetchItems = async () => {
-        try {
-          const data = await getItemsList();
-          console.log(data);
-          setItemList(data);
-          setLoading(false);
-        } catch (e) {
-          console.error('Error loading item list.', e);
-        }
-      };
-      
+      try {
+        const data = await getItemsList();
+        setItemList(data);
+        setLoading(false);
+      } catch (e) {
+        console.error('Error loading item list.', e);
+      }
+    };
 
     const fetchItemTypes = async () => {
       try {
@@ -51,13 +49,12 @@ const Items = () => {
     return <Spinner />;
   }
 
-    // Filter items by name or by selected type
-    const filteredItemList = itemList.filter((item) => {
-        const matchesSearchTerm = item.name.toLowerCase().includes(searchTerm.toLowerCase());
-        const matchesType = selectedType ? item.type === selectedType : true;
-        return matchesSearchTerm && matchesType;
-    });
-  
+  // Filter items by name or by selected type
+  const filteredItemList = itemList.filter((item) => {
+    const matchesSearchTerm = item.name.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesType = selectedType ? item.type === selectedType : true;
+    return matchesSearchTerm && matchesType;
+  });
 
   return (
     <div className="items-container">

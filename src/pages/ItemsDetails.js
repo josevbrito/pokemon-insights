@@ -27,10 +27,11 @@ const ItemsDetails = () => {
     return <Spinner />;
   }
 
-  // Função para obter o nome em inglês
+
+  // return english
   const getItemNameInEnglish = () => {
     const englishNameEntry = itemDetails.names.find(name => name.language.name === 'en');
-    return englishNameEntry ? englishNameEntry.name : itemDetails.names[0].name; // fallback para o primeiro nome se não houver entrada em inglês
+    return englishNameEntry ? englishNameEntry.name : itemDetails.names[0].name;
   };
 
   return (
