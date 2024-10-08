@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Pokedex from './pages/Pokedex';
 import Items from './pages/Items';
 import PokemonDetails from './pages/PokemonDetails';
+import ItemsDetails from './pages/ItemsDetails';
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/pokedex" element={<Pokedex />} />
             <Route path="/items" element={<Items />} />
+            <Route path="/item/:itemName" element={<ItemsDetails />} />
             <Route path="/pokemon/:pokemonName" element={<PokemonDetails />} />
           </Routes>
         </main>
