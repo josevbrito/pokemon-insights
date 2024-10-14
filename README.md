@@ -21,25 +21,54 @@ Pokemon Insights is a web application developed in React that utilizes the PokeA
 The project structure is as follows:
 
 ```
-  pokemon-insights/
-  ├── public/
-  │ ├── index.html
-  │ └── favicon.ico
-  ├── src/
-  │ ├── components/
-  │ │ ├── Header.js
-  │ │ ├── Footer.js
-  │ │ └── PokemonDetails.js
-  │ ├── pages/
-  │ │ ├── Home.js
-  │ │ ├── Pokedex.js
-  │ │ └── Types.js
-  │ ├── services/
-  │ │ └── pokeApiService.js
-  │ ├── App.js
-  │ ├── App.css
-  │ └── index.js
-  └── package.json
+pokemon-insights/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   ├── CardItem.js
+│   │   ├── CardPokemon.js
+│   │   ├── Footer.js
+│   │   ├── Header.js
+│   │   └── Spinner.js
+│   ├── css/
+│   │   ├── home/
+│   │   │   └── Home.css
+│   │   ├── item/
+│   │   │   ├── CardItem.css
+│   │   │   ├── Items.css
+│   │   │   └── ItemsDetails.css
+│   │   ├── layout/
+│   │   │   ├── Footer.css
+│   │   │   ├── Header.css
+│   │   │   ├── NotFound.css
+│   │   │   └── Spinner.css
+│   │   ├── pokedex/
+│   │       ├── CardPokemon.css
+│   │       ├── Pokedex.css
+│   │       ├── PokemonDetails.css
+│   │       └── Types.css
+│   ├── pages/
+│   │   ├── home/
+│   │   │   └── Home.js
+│   │   ├── item/
+│   │   │   ├── Items.js
+│   │   │   └── ItemsDetails.js
+│   │   ├── others/
+│   │   │   └── NotFound.js
+│   │   └── pokedex/
+│   │       ├── Pokedex.js
+│   │       └── PokemonDetails.js
+│   ├── services/
+│   │   ├── itemApiService.js
+│   │   └── pokeApiService.js
+│   ├── App.js
+│   ├── App.css
+│   ├── index.css
+│   └── index.js
+└── package.json
+
 ```
 
 ## Installation
