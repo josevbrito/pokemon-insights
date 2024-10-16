@@ -44,14 +44,14 @@
 }
 
 .items-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 10px;
 }
 
 .items-grid p {
+  display: flex;
+  justify-content: center;
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
